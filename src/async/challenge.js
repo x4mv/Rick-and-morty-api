@@ -8,16 +8,17 @@ const anotherFunction = async (URL) =>{
         const species = await fetchData(`${API}${data.results[0].id}`)
         const origin = await fetchData(character.origin.url)
         
-        console.log(data.info.count)
-        console.log(character.name)
-        console.log(origin.dimension)
-        console.log(species.species)
+        console.log('Cantidad de pjs: ',data.info.count)
+        console.log('Name del PJ: ',character.name)
+        console.log('De la dimension tal: ',origin.dimension)
+        console.log('Es la especie tal: ',species.species)
    
     }catch(error){
         console.error(error)
     }
 }
 
-console.log('Before')
+
 anotherFunction(API)
-console.log('After')
+
+
